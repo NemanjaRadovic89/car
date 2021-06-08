@@ -23,8 +23,9 @@ public class Main {
         System.out.println("Model:" + bmw.model);
         
         
-        Car fiat = new Car("Fiat","Tipo","Green",2005,0,20,5);
-            fiat.travel(100);
+        Car fiat = new Car("Fiat","Tipo","Green",2005,0,90,10);
+            fiat.printAttributes();
+            fiat.travel(300);
             fiat.printAttributes();        
             
     }

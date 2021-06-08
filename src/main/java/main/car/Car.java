@@ -69,13 +69,28 @@ public class Car {
     }
     
     public void travel(int distance){
-     //int newMileage = this.getMileage() + distance;
-     //this.setMileage(newMileage);
+       //int newMileage = this.getMileage() + distance;
+       //this.setMileage(newMileage);
+       //this.setMileage(this.getMileage() + distance);
        
-       this.setMileage(this.getMileage() + distance);
-       int spentFuel = this.consuption * distance;  
-       int newFuel = this.getFuel() - spentFuel;
-       this.setFuel(newFuel);
+       //int spentFuel = this.consuption * distance/100;  
+       //int newFuel = this.getFuel() - spentFuel;
+       //this.setFuel(newFuel);
+       //this.setFuel(this.getFuel() - this.consuption * distance); 
+       
+    int fuelNeededForTrip = this.consuption * distance/100; 
+    if (this.getFuel() > fuelNeededForTrip) {
+        this.setMileage(this.getMileage() + distance);
+        this.setFuel(this.getFuel()- fuelNeededForTrip);
+        System.out.println("Uspesno je predjen put od" + distance +" kilometara");
+    } else {
+         System.out.println("Nema dovoljno goriva za takav put");       
+    }
+        
+   
+    }
+    
+       
        
        
        
@@ -83,6 +98,10 @@ public class Car {
        //potroseno gorivo = p.potrosnja x distanca
        //novo stanje goriva = trenutno gorivo - potroseno gorivo
        
+       //da li u atomobilu ima vise goriva nego sto ce trebati za put
+       //trenutno gorivo
+       //gorivo neophodno za put
+       //if trenutno gorivo > gorivo neophodno za put
        
        
        
